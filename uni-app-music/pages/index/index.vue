@@ -6,6 +6,7 @@
 		</view>
 		<myAudio></myAudio>
 	</view>
+	
 </template>
 
 <script>

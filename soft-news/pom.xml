@@ -11,20 +11,22 @@
         <module>soft-news-common</module>
         <module>soft-news-model</module>
         <module>soft-news-service-api</module>
+        <module>soft-news-service-user</module>
     </modules>
     <packaging>pom</packaging>
 
+
     <!--
-     1. 聚合工程可以分为顶级项目（顶级工程，父工程）与子工程（子module模块），
-         这两者的关系其实就是父子继承的关系，子工程在maven中可以称之为module，
-         模块与模块之间是平级的，是可以相互依赖的。
-     2. 子模块可以使用顶级工程中所有的资源（依赖），子模块之间如果有要使用资源的    话，必须构建依赖（构建关系）
-     3. 一个顶级工程是可以由多个不同的子工程共同组合而成。
- -->
+       1. 聚合工程可以分为顶级项目（顶级工程，父工程）与子工程（子module模块），
+           这两者的关系其实就是父子继承的关系，子工程在maven中可以称之为module，
+           模块与模块之间是平级的，是可以相互依赖的。
+       2. 子模块可以使用顶级工程中所有的资源（依赖），子模块之间如果有要使用资源的    话，必须构建依赖（构建关系）
+       3. 一个顶级工程是可以由多个不同的子工程共同组合而成。
+   -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>2.3.3.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -182,8 +184,16 @@
                 <version>${joda-time.version}</version>
             </dependency>
 
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <finalName>${project.artifactId}</finalName>
