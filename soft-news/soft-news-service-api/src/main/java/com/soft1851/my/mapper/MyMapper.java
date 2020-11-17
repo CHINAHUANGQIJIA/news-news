@@ -5,7 +5,7 @@ import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;
 
 /**
- * 继承自己的MyMapper
+ * 继承自己但是的MyMapper
  *
  * @author mqxu
  */
