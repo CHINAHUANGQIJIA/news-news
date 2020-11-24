@@ -1,10 +1,8 @@
 package com.soft1851.user.mapper;
 
 import com.soft1851.my.mapper.MyMapper;
+import com.soft1851.pojo.AppUser;
 import com.soft1851.pojo.Fans;
 
-/**
- * @author crq
- */
-public interface FansMapper extends MyMapper<Fans> {
+public interface FansMapper extends tk.mybatis.mapper.common.Mapper<Fans> {
 }

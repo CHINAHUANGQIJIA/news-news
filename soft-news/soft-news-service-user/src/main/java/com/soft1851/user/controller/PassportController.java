@@ -1,6 +1,5 @@
 package com.soft1851.user.controller;
 
-
 import com.soft1851.api.BaseController;
 import com.soft1851.api.controller.user.PassportControllerApi;
 import com.soft1851.enums.UserStatus;
@@ -24,31 +23,35 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * @author crq
- */
+ * @ClassName $(Name)
+ * @Description TODO
+ * @Author Qin jian
+ * @Date 2020/11/15
+ * @Version 1.0
+ **/
 @RestController
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
+
 public class PassportController extends BaseController implements PassportControllerApi {
     @Resource
     private SmsUtil smsUtil;
     private final UserService userService;
 
+
     @Override
     public GraceResult getCode(String mobile, HttpServletRequest request) {
-        //获取用户ip
+        // 获取用户Ip
         String userIp = IpUtil.getRequestIp(request);
-        //根据用户的ip进行限制，限制用户在60秒内只能获取一次验证码
-        redis.setnx60s(MOBILE_SMSCODE + ":" + userIp,userIp);
-        //生成随机验证码并且发送短信
-        String random = (int) ((Math.random() * 9 + 1)*100000) + "";
+        // 根据用户的ip进行限制，限制用户在60秒内只能发送一次验证码
+        redis.setnx60s(MOBILE_SMSCODE + ":" + userIp, userIp);
+        // 生成随机验证码并且发送短信
+        String random = (int) ((Math.random() * 9 + 1) * 100000) + "";
         System.out.println(random);
-        //验证码存入redis
-        redis.set(MOBILE_SMSCODE +":" +mobile,random,30*60);
-      //  smsUtil.sendSms(mobile,random);
+        smsUtil.sendSms(mobile, random);
+        // 把验证码存入redis，用于后续进行验证
+        redis.set(MOBILE_SMSCODE + ":" + mobile, random, 30 * 60);
         return GraceResult.ok();
     }
-
-
 
     @Override
     public GraceResult doSign(@Valid RegistLoginBO registLoginBO, BindingResult result, HttpServletRequest request, HttpServletResponse response) {
@@ -91,5 +94,12 @@ public class PassportController extends BaseController implements PassportContro
         redis.del(MOBILE_SMSCODE + ":" + mobile);
         //返回用户状态
         return GraceResult.ok(userActiveStatus);
+    }
+    @Override
+    public GraceResult logout(HttpServletRequest request, HttpServletResponse response, String userId) {
+        redis.del(REDIS_USER_TOKEN + ":" + userId);
+        setCookie(request,response,"utoken","",COOKIE_DELETE);
+        setCookie(request,response,"uid","",COOKIE_DELETE);
+        return GraceResult.ok();
     }
 }

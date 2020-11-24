@@ -3,19 +3,19 @@ package com.soft1851.utils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @description: IP工具类
+ * @description: IP宸ュ叿绫�
  * @author: mqxu
  * @create: 2020-11-15
  **/
 public class IpUtil {
 
     /**
-     * 获取请求IP:
-     * 用户的真实IP不能使用request.getRemoteAddr()
-     * 这是因为可能会使用一些代理软件，这样ip获取就不准确了
-     * 此外我们如果使用了多级（LVS/Nginx）反向代理的话，ip需要从X-Forwarded-For中获得第一个非unknown的IP才是用户的有效ip。
+     * 鑾峰彇璇锋眰IP:
+     * 鐢ㄦ埛鐨勭湡瀹濱P涓嶈兘浣跨敤request.getRemoteAddr()
+     * 杩欐槸鍥犱负鍙兘浼氫娇鐢ㄤ竴浜涗唬鐞嗚蒋浠讹紝杩欐牱ip鑾峰彇灏变笉鍑嗙‘浜�
+     * 姝ゅ鎴戜滑濡傛灉浣跨敤浜嗗绾э紙LVS/Nginx锛夊弽鍚戜唬鐞嗙殑璇濓紝ip闇€瑕佷粠X-Forwarded-For涓幏寰楃涓€涓潪unknown鐨処P鎵嶆槸鐢ㄦ埛鐨勬湁鏁坕p銆�
      *
-     * @param request 请求
+     * @param request 璇锋眰
      * @return String
      */
     public static String getRequestIp(HttpServletRequest request) {

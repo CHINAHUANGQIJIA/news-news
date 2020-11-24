@@ -1,15 +1,15 @@
 package com.soft1851.api.config;
 
-
+import org.springframework.web.filter.CorsFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
 
 /**
- * @author crq
+ * @author Qin Jian
+ * @description TODO
+ * @Data 2020/11/15
  */
 @Configuration
 public class CorsConfig {

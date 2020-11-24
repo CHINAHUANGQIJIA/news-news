@@ -7,19 +7,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 
 /**
- * @description: Json工具类
+ * @description: Json宸ュ叿绫�
  * @author: mqxu
  * @create: 2020-11-15
  **/
 public class JsonUtil {
 
-    // 定义jackson对象
+    // 瀹氫箟jackson瀵硅薄
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
     /**
-     * 将对象转换成json字符串
+     * 灏嗗璞¤浆鎹㈡垚json瀛楃涓�
      *
-     * @param data 入参对象
+     * @param data 鍏ュ弬瀵硅薄
      * @return String
      */
     public static String objectToJson(Object data) {
@@ -33,10 +33,10 @@ public class JsonUtil {
     }
 
     /**
-     * 将json结果集转化为对象
+     * 灏唈son缁撴灉闆嗚浆鍖栦负瀵硅薄
      *
-     * @param jsonData json数据
-     * @param beanType 对象中的object类型
+     * @param jsonData json鏁版嵁
+     * @param beanType 瀵硅薄涓殑object绫诲瀷
      * @return <T>
      */
     public static <T> T jsonToPojo(String jsonData, Class<T> beanType) {
@@ -50,10 +50,10 @@ public class JsonUtil {
     }
 
     /**
-     * 将json数据转换成pojo对象list
+     * 灏唈son鏁版嵁杞崲鎴恜ojo瀵硅薄list
      *
-     * @param jsonData 入参
-     * @param beanType 入参
+     * @param jsonData 鍏ュ弬
+     * @param beanType 鍏ュ弬
      * @return <T>
      */
     public static <T> List<T> jsonToList(String jsonData, Class<T> beanType) {

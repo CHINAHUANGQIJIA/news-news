@@ -3,11 +3,12 @@ package com.soft1851.enums;
 import java.awt.color.ICC_ColorSpace;
 
 /**
- * 描述:
- *
- * @author：Guorc
- * @create 2020-11-16 13:53
- */
+ * @ClassName $(Name)
+ * @Description TODO
+ * @Author Qin jian
+ * @Date 2020/11/16
+ * @Version 1.0
+ **/
 public enum  UserStatus {
     INACTIVE(0,"未激活"),
     ACTIVE(1,"已激活"),

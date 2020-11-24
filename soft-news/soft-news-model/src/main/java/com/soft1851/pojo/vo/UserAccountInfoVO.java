@@ -8,16 +8,16 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * @author crq
- * @version 1.0.0
- * @ClassName UserAccountInfoVO.java
+ * @ClassName $(Name)
  * @Description TODO
- * @createTime 2020年11月17日 10:18:00
- */
+ * @Author Qin jian
+ * @Date 2020/11/17
+ * @Version 1.0
+ **/
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserAccountInfoVO {
     private String id;
     private String mobile;

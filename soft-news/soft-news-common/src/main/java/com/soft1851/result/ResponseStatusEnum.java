@@ -1,7 +1,7 @@
 package com.soft1851.result;
 
 /**
- * @description: 响应返回枚举
+ * @description: 鍝嶅簲杩斿洖鏋氫妇
  * @author: mqxu
  * @create: 2020-11-14 11:22
  **/
@@ -117,4 +117,3 @@ public enum ResponseStatusEnum {
         return msg;
     }
 }
-

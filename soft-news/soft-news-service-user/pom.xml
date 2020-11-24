@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>soft-news-service-user</artifactId>
-
+    <!-- 用户工程 -->
     <dependencies>
         <dependency>
             <groupId>com.soft1851</groupId>
@@ -18,22 +18,21 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.soft1851</groupId>
-            <artifactId>soft-news-model</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-
+        <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.1.0</version>
-            <scope>compile</scope>
+            <groupId>com.speedment.jpastreamer</groupId>
+            <artifactId>criteria</artifactId>
+            <version>0.1.7</version>
         </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+
     </dependencies>
 </project>

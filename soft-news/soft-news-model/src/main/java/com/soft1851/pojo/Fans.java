@@ -1,8 +1,6 @@
 package com.soft1851.pojo;
 
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Column;
+import javax.persistence.*;
 
 public class Fans {
     @Id

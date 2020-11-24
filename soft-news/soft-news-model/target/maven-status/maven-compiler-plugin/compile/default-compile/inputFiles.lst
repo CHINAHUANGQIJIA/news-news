@@ -1,6 +1,9 @@
-D:\大三上课程资料\hun\11-17\cloud-uni-app-vue\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\bo\RegistLoginBO.java
-D:\大三上课程资料\hun\11-17\cloud-uni-app-vue\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\vo\AppUserVO.java
-D:\大三上课程资料\hun\11-17\cloud-uni-app-vue\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\AppUser.java
-D:\大三上课程资料\hun\11-17\cloud-uni-app-vue\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\Fans.java
-D:\大三上课程资料\hun\11-17\cloud-uni-app-vue\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\bo\UpdateUserInfoBO.java
-D:\大三上课程资料\hun\11-17\cloud-uni-app-vue\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\vo\UserAccountInfoVO.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\bo\UpdateUserInfoBO.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\AppUser.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\Fans.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\vo\AppUserVO.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\AdminUser.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\bo\AdminLoginBO.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\vo\UserAccountInfoVO.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\bo\RegistLoginBO.java
+D:\大三上课程资料\hun\112324\soft-news\soft-news-model\src\main\java\com\soft1851\pojo\bo\NewAdminBO.java

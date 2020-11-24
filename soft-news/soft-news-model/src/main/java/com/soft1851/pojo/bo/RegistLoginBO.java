@@ -8,8 +8,12 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @author crq
- */
+ * @ClassName $(Name)
+ * @Description TODO
+ * @Author Qin jian
+ * @Date 2020/11/16
+ * @Version 1.0
+ **/
 @Data
 @Builder
 @AllArgsConstructor

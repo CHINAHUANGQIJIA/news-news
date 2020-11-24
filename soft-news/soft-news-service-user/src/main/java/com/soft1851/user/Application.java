@@ -6,8 +6,12 @@ import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * @author crq
- */
+ * @ClassName $(Name)
+ * @Description 启动主类
+ * @Author Qin jian
+ * @Date 2020/11/13
+ * @Version 1.0
+ **/
 @SpringBootApplication
 @MapperScan(basePackages = "com.soft1851.user.mapper")
 @ComponentScan("com.soft1851")
@@ -16,4 +20,5 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class,args);
     }
+
 }

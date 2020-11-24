@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
- * @description: 日期工具类
+ * @description: 鏃ユ湡宸ュ叿绫�
  * @author: mqxu
  * @create: 2020-11-15
  **/
@@ -32,7 +32,7 @@ public class DateUtil {
     public static String DATE_PATTERN = "yyyyMMddHHmmss";
 
     /**
-     * 则个
+     * 鍒欎釜
      */
     private static final boolean LENIENT_DATE = false;
 
@@ -355,7 +355,7 @@ public class DateUtil {
     }
 
     /**
-     * 返回固定格式的当前时间
+     * 杩斿洖鍥哄畾鏍煎紡鐨勫綋鍓嶆椂闂�
      * yyyy-MM-dd hh:mm:ss
      *
      * @param date
@@ -579,9 +579,9 @@ public class DateUtil {
 
     /**
      * @return
-     * @Description: 获得本月的第一天日期
+     * @Description: 鑾峰緱鏈湀鐨勭涓€澶╂棩鏈�
      * @author leechenxiang
-     * @date 2017年5月31日 下午1:37:34
+     * @date 2017骞�5鏈�31鏃� 涓嬪崍1:37:34
      */
     public static String getFirstDateOfThisMonth() {
 
@@ -598,9 +598,9 @@ public class DateUtil {
 
     /**
      * @return
-     * @Description: 获得本月的最后一天日期
+     * @Description: 鑾峰緱鏈湀鐨勬渶鍚庝竴澶╂棩鏈�
      * @author leechenxiang
-     * @date 2017年5月31日 下午1:37:50
+     * @date 2017骞�5鏈�31鏃� 涓嬪崍1:37:50
      */
     public static String getLastDateOfThisMonth() {
         SimpleDateFormat format = new SimpleDateFormat(ISO_EXPANDED_DATE_FORMAT);
@@ -614,7 +614,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 判断字符串日期是否匹配指定的格式化日期
+     * @Description: 鍒ゆ柇瀛楃涓叉棩鏈熸槸鍚﹀尮閰嶆寚瀹氱殑鏍煎紡鍖栨棩鏈�
      */
     public static boolean isValidDate(String strDate, String formatter) {
         SimpleDateFormat sdf = null;

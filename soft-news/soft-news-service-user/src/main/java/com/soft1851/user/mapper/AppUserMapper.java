@@ -4,9 +4,6 @@ import com.soft1851.my.mapper.MyMapper;
 import com.soft1851.pojo.AppUser;
 import org.springframework.stereotype.Repository;
 
-/**
- * @author crq
- */
 @Repository
-public interface AppUserMapper extends MyMapper<AppUser> {
+public interface AppUserMapper extends tk.mybatis.mapper.common.Mapper<AppUser> {
 }

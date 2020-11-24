@@ -3,11 +3,12 @@ package com.soft1851.utils;
 import javax.security.auth.Subject;
 
 /**
- * 描述:
- *
- * @author：Guorc
- * @create 2020-11-16 13:35
- */
+ * @ClassName $(Name)
+ * @Description TODO
+ * @Author Qin jian
+ * @Date 2020/11/16
+ * @Version 1.0
+ **/
 public class DesensitizationUtil {
     private static final int SIZE = 6;
     private static final String SYMBOL = "*";

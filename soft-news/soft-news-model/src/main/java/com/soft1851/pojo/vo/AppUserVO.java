@@ -6,15 +6,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author crq
+ * @author wl_sun
+ * @description TODO
+ * @Data 2020/11/17
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class AppUserVO {
+
     private String id;
+
     private String nickname;
+
     private String face;
 
     /**

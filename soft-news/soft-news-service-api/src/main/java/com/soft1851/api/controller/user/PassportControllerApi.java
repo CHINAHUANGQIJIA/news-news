@@ -12,18 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 /**
- * @author crq
- */
-@Api(value = "用户注册登录",tags = {"用户注册登录的Controller"})
+ * @ClassName $(Name)
+ * @Description TODO
+ * @Author qin jian
+ * @Date 2020/11/15
+ * @Version 1.0
+ **/
+@Api(value = "用户注册登录", tags = {"用户注册登录的Controller"})
 @RequestMapping("passport")
 public interface PassportControllerApi {
     /**
      * 发送短信
-     * @param mobile
-     * @param request
-     * @return
+     * @param mobile 手机号
+     * @param request 请求
+     * @return 统一响应
      */
-    @ApiOperation(value = "获取短信验证码",notes = "获得短信验证码",httpMethod = "GET")
+    @ApiOperation(value = "获取短信验证码", notes = "获得短信验证码", httpMethod = "GET")
     @GetMapping("/smsCode")
     GraceResult getCode(@RequestParam String mobile, HttpServletRequest request);
 
@@ -41,5 +45,21 @@ public interface PassportControllerApi {
                        BindingResult result,
                        HttpServletRequest request,
                        HttpServletResponse response);
+
+    /**
+     * 退出登录
+     * @param request
+     * @param response
+     * @param userId
+     * @return
+     */
+    @PostMapping("/logout")
+    @ApiOperation(value = "用户退出登录",notes = "用户退出登录",
+            httpMethod = "POST"
+    )
+    GraceResult logout(HttpServletRequest request,
+                       HttpServletResponse response,
+                       @RequestParam String userId
+    );
 
 }

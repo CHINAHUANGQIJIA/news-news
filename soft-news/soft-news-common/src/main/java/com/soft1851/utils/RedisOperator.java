@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @description: Redis工具类
+ * @description: Redis宸ュ叿绫�
  * @author: mqxu
  * @create: 2020-11-15 19:30
  **/
@@ -27,9 +27,9 @@ public class RedisOperator {
 
 
     /**
-     * 判断key是否存在
+     * 鍒ゆ柇key鏄惁瀛樺湪
      *
-     * @param key 键
+     * @param key 閿�
      * @return Boolean
      */
     public Boolean keyIsExist(String key) {
@@ -37,9 +37,9 @@ public class RedisOperator {
     }
 
     /**
-     * 实现命令：TTL key，以秒为单位，返回给定 key的剩余生存时间(TTL, time to live)。
+     * 瀹炵幇鍛戒护锛歍TL key锛屼互绉掍负鍗曚綅锛岃繑鍥炵粰瀹� key鐨勫墿浣欑敓瀛樻椂闂�(TTL, time to live)銆�
      *
-     * @param key 键
+     * @param key 閿�
      * @return Long
      */
     public Long ttl(String key) {
@@ -47,18 +47,18 @@ public class RedisOperator {
     }
 
     /**
-     * 实现命令：expire 设置过期时间，单位秒
+     * 瀹炵幇鍛戒护锛歟xpire 璁剧疆杩囨湡鏃堕棿锛屽崟浣嶇
      *
-     * @param key 键
+     * @param key 閿�
      */
     public void expire(String key, long timeout) {
         redisTemplate.expire(key, timeout, TimeUnit.SECONDS);
     }
 
     /**
-     * 实现命令：increment key，增加key一次
+     * 瀹炵幇鍛戒护锛歩ncrement key锛屽鍔爇ey涓€娆�
      *
-     * @param key 键
+     * @param key 閿�
      * @return Long
      */
     public Long increment(String key, long delta) {
@@ -66,9 +66,9 @@ public class RedisOperator {
     }
 
     /**
-     * 实现命令：decrement key，减少key一次
+     * 瀹炵幇鍛戒护锛歞ecrement key锛屽噺灏慿ey涓€娆�
      *
-     * @param key 键
+     * @param key 閿�
      * @return Long
      */
     public Long decrement(String key, long delta) {
@@ -76,16 +76,16 @@ public class RedisOperator {
     }
 
     /**
-     * 实现命令：KEYS pattern，查找所有符合给定模式 pattern的 key
+     * 瀹炵幇鍛戒护锛欿EYS pattern锛屾煡鎵炬墍鏈夌鍚堢粰瀹氭ā寮� pattern鐨� key
      */
     public Set<String> keys(String pattern) {
         return redisTemplate.keys(pattern);
     }
 
     /**
-     * 实现命令：DEL key，删除一个key
+     * 瀹炵幇鍛戒护锛欴EL key锛屽垹闄や竴涓猭ey
      *
-     * @param key 键
+     * @param key 閿�
      */
     public void del(String key) {
         redisTemplate.delete(key);
@@ -93,57 +93,57 @@ public class RedisOperator {
 
 
     /**
-     * 实现命令：SET key value，设置一个key-value（将字符串值 value关联到 key）
+     * 瀹炵幇鍛戒护锛歋ET key value锛岃缃竴涓猭ey-value锛堝皢瀛楃涓插€� value鍏宠仈鍒� key锛�
      *
-     * @param key   键
-     * @param value 值
+     * @param key   閿�
+     * @param value 鍊�
      */
     public void set(String key, String value) {
         redisTemplate.opsForValue().set(key, value);
     }
 
     /**
-     * 实现命令：SET key value EX seconds，设置key-value和超时时间（秒）
+     * 瀹炵幇鍛戒护锛歋ET key value EX seconds锛岃缃甼ey-value鍜岃秴鏃舵椂闂达紙绉掞級
      *
-     * @param key     键
-     * @param value   值
-     * @param timeout （以秒为单位）
+     * @param key     閿�
+     * @param value   鍊�
+     * @param timeout 锛堜互绉掍负鍗曚綅锛�
      */
     public void set(String key, String value, long timeout) {
         redisTemplate.opsForValue().set(key, value, timeout, TimeUnit.SECONDS);
     }
 
     /**
-     * 如果key不存在，则设置，如果存在，则报错
+     * 濡傛灉key涓嶅瓨鍦紝鍒欒缃紝濡傛灉瀛樺湪锛屽垯鎶ラ敊
      *
-     * @param key   键
-     * @param value 值
+     * @param key   閿�
+     * @param value 鍊�
      */
     public void setnx60s(String key, String value) {
         redisTemplate.opsForValue().setIfAbsent(key, value, 60, TimeUnit.SECONDS);
     }
 
     /**
-     * 如果key不存在，则设置，如果存在，则报错
+     * 濡傛灉key涓嶅瓨鍦紝鍒欒缃紝濡傛灉瀛樺湪锛屽垯鎶ラ敊
      *
-     * @param key   键
-     * @param value 值
+     * @param key   閿�
+     * @param value 鍊�
      */
     public void setnx(String key, String value) {
         redisTemplate.opsForValue().setIfAbsent(key, value);
     }
 
     /**
-     * 实现命令：GET key，返回 key所关联的字符串值。
+     * 瀹炵幇鍛戒护锛欸ET key锛岃繑鍥� key鎵€鍏宠仈鐨勫瓧绗︿覆鍊笺€�
      *
-     * @param key 键
+     * @param key 閿�
      */
     public String get(String key) {
         return (String) redisTemplate.opsForValue().get(key);
     }
 
     /**
-     * 批量查询，对应mget
+     * 鎵归噺鏌ヨ锛屽搴攎get
      *
      * @param keys
      * @return
@@ -153,7 +153,7 @@ public class RedisOperator {
     }
 
     /**
-     * 批量查询，管道pipeline
+     * 鎵归噺鏌ヨ锛岀閬損ipeline
      *
      * @param keys
      * @return
@@ -176,7 +176,7 @@ public class RedisOperator {
 
 
     /**
-     * 实现命令：HSET key field value，将哈希表 key中的域 field的值设为 value
+     * 瀹炵幇鍛戒护锛欻SET key field value锛屽皢鍝堝笇琛� key涓殑鍩� field鐨勫€艰涓� value
      *
      * @param key
      * @param field
@@ -187,7 +187,7 @@ public class RedisOperator {
     }
 
     /**
-     * 实现命令：HGET key field，返回哈希表 key中给定域 field的值
+     * 瀹炵幇鍛戒护锛欻GET key field锛岃繑鍥炲搱甯岃〃 key涓粰瀹氬煙 field鐨勫€�
      *
      * @param key
      * @param field
@@ -198,7 +198,7 @@ public class RedisOperator {
     }
 
     /**
-     * 实现命令：HDEL key field [field ...]，删除哈希表 key 中的一个或多个指定域，不存在的域将被忽略。
+     * 瀹炵幇鍛戒护锛欻DEL key field [field ...]锛屽垹闄ゅ搱甯岃〃 key 涓殑涓€涓垨澶氫釜鎸囧畾鍩燂紝涓嶅瓨鍦ㄧ殑鍩熷皢琚拷鐣ャ€�
      *
      * @param key
      * @param fields
@@ -208,7 +208,7 @@ public class RedisOperator {
     }
 
     /**
-     * 实现命令：HGETALL key，返回哈希表 key中，所有的域和值。
+     * 瀹炵幇鍛戒护锛欻GETALL key锛岃繑鍥炲搱甯岃〃 key涓紝鎵€鏈夌殑鍩熷拰鍊笺€�
      *
      * @param key
      * @return
@@ -217,35 +217,35 @@ public class RedisOperator {
         return redisTemplate.opsForHash().entries(key);
     }
 
-    // List（列表）
+    // List锛堝垪琛級
 
     /**
-     * 实现命令：LPUSH key value，将一个值 value插入到列表 key的表头
+     * 瀹炵幇鍛戒护锛歀PUSH key value锛屽皢涓€涓€� value鎻掑叆鍒板垪琛� key鐨勮〃澶�
      *
      * @param key
      * @param value
-     * @return 执行 LPUSH命令后，列表的长度。
+     * @return 鎵ц LPUSH鍛戒护鍚庯紝鍒楄〃鐨勯暱搴︺€�
      */
     public long lpush(String key, String value) {
         return redisTemplate.opsForList().leftPush(key, value);
     }
 
     /**
-     * 实现命令：LPOP key，移除并返回列表 key的头元素。
+     * 瀹炵幇鍛戒护锛歀POP key锛岀Щ闄ゅ苟杩斿洖鍒楄〃 key鐨勫ご鍏冪礌銆�
      *
      * @param key
-     * @return 列表key的头元素。
+     * @return 鍒楄〃key鐨勫ご鍏冪礌銆�
      */
     public String lpop(String key) {
         return (String) redisTemplate.opsForList().leftPop(key);
     }
 
     /**
-     * 实现命令：RPUSH key value，将一个值 value插入到列表 key的表尾(最右边)。
+     * 瀹炵幇鍛戒护锛歊PUSH key value锛屽皢涓€涓€� value鎻掑叆鍒板垪琛� key鐨勮〃灏�(鏈€鍙宠竟)銆�
      *
      * @param key
      * @param value
-     * @return 执行 LPUSH命令后，列表的长度。
+     * @return 鎵ц LPUSH鍛戒护鍚庯紝鍒楄〃鐨勯暱搴︺€�
      */
     public long rpush(String key, String value) {
         return redisTemplate.opsForList().rightPush(key, value);

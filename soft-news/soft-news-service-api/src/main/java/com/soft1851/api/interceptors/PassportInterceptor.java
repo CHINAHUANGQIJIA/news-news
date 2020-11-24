@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author crq
+ * @author qj
  */
 public class PassportInterceptor implements HandlerInterceptor {
     @Autowired
@@ -51,7 +51,7 @@ public class PassportInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response,
                            Object handler, ModelAndView modelAndView
-                           ) throws Exception{
+    ) throws Exception{
 
     }
 
@@ -59,5 +59,4 @@ public class PassportInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request,HttpServletResponse response,Object handler,Exception exception) throws Exception {
 
     }
-
 }
